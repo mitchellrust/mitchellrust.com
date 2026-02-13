@@ -7,14 +7,17 @@ export default function AboutPage() {
         <div className="glass rounded-lg p-8 mb-8">
           <h2 className="text-3xl font-bold mb-4">Who I Am</h2>
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            I'm Mitchell Rust, a passionate software engineer with a love for building elegant, 
-            user-focused applications. I specialize in modern web technologies and believe that 
-            the best software combines powerful functionality with thoughtful design.
+            I'm Mitchell Rust, a passionate software engineer with a desire to always explore a
+            wide variety of technology stacks. With experience in cross-platform and native mobile development,
+            enterprise-level event driven microservice integration, and full stack SaaS application
+            develoment, I've found unique problem spaces through each that I've really enjoyed getting
+            to explore.
           </p>
           <p className="text-gray-300 text-lg leading-relaxed">
             My approach to development centers on writing clean, maintainable code while never 
             losing sight of the end user's experience. I'm constantly learning and exploring 
-            new technologies to deliver the best solutions possible.
+            new technologies so I can leverage the best toolsets for each new project I find
+            myself diving into.
           </p>
         </div>
 
@@ -27,7 +30,20 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold mb-2">Full-Stack Development</h3>
                 <p className="text-gray-400">
                   Building end-to-end web applications with modern frameworks like Next.js, React, 
-                  and Node.js. From database design to responsive frontends, I handle the complete stack.
+                  and Node.js. From database design to responsive frontends, I handle the complete stack,
+                  from payment integration to UX that keeps users engaged.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-2 h-2 mt-2 bg-[var(--accent)] rounded-full mr-4"></div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Enterprise-Grade Event Driven Architcture</h3>
+                <p className="text-gray-400">
+                  With a focus on event-driven, asynchronous designs, I've built solutions that provide
+                  resiliency when the unexpected occurs. Emphasizing RESTful design in these systems, dealing
+                  with network and application downtime no longer becomes a weekend support nightmare.
                 </p>
               </div>
             </div>
@@ -37,9 +53,10 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">UI/UX Implementation</h3>
                 <p className="text-gray-400">
-                  Creating polished user interfaces with attention to detail. I focus on smooth 
-                  animations, intuitive interactions, and accessibility to ensure every user has 
-                  a great experience.
+                  For frontend experiences, I have a "product sense" focus on clean and modern design.
+                  With each application having its own nuance, I work to find the line between form and
+                  function, whether I'm building a modern customer portal, internal developer tooling, or
+                  complex dashboards.
                 </p>
               </div>
             </div>
@@ -58,10 +75,11 @@ export default function AboutPage() {
             <div className="flex items-start">
               <div className="flex-shrink-0 w-2 h-2 mt-2 bg-[var(--accent)] rounded-full mr-4"></div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Open Source Contributions</h3>
+                <h3 className="text-xl font-semibold mb-2">Continuous Learning and Exploration</h3>
                 <p className="text-gray-400">
-                  I believe in giving back to the community. I maintain and contribute to open 
-                  source projects, sharing knowledge and collaborating with developers worldwide.
+                  An engineer's education is never complete, and I'm no exception. With a fast-evolving
+                  technical landscape, I find plenty of opportunity through personal projects of all
+                  types to continue to sharpen my technical edge.
                 </p>
               </div>
             </div>

@@ -1,10 +1,11 @@
 import Hero from '@/components/Hero';
 import ProjectCard from '@/components/ProjectCard';
 import { getFeaturedRepos } from '@/lib/api';
+import { GitHubRepo } from '@/lib/types';
 import Link from 'next/link';
 
 export default async function Home() {
-  let featuredRepos;
+  let featuredRepos: GitHubRepo[];
   
   try {
     featuredRepos = await getFeaturedRepos();

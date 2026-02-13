@@ -40,7 +40,7 @@ export default function ProjectCard({ repo }: ProjectCardProps) {
           {repo.topics.slice(0, 3).map((topic) => (
             <span
               key={topic}
-              className="px-3 py-1 text-xs rounded-full bg-[var(--accent)]/20 text-[var(--accent)]"
+              className="px-3 py-1 text-xs rounded-full glass text-[var(--accent)]"
             >
               {topic}
             </span>
@@ -49,9 +49,6 @@ export default function ProjectCard({ repo }: ProjectCardProps) {
 
         <div className="flex items-center justify-between text-sm">
           <span className="text-[var(--accent)] font-medium">View Details →</span>
-          {repo.homepage && (
-            <span className="text-gray-400">Has demo</span>
-          )}
         </div>
       </div>
     </Link>

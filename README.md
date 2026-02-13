@@ -168,6 +168,7 @@ Site will be available at: `https://your-site.vercel.app`
     ├── lib/
     │   ├── api.ts         # API client
     │   └── types.ts       # TypeScript types
+    ├── public/            # Static assets
     ├── package.json
     ├── tailwind.config.ts
     └── tsconfig.json
@@ -175,12 +176,12 @@ Site will be available at: `https://your-site.vercel.app`
 
 ## API Endpoints
 
-- `GET /api/health` - Health check
-- `GET /api/repos` - List all public repositories (excluding forks)
+- `GET /health` - Health check
+- `GET /repos` - List all public repositories (excluding forks)
   - Query params: `page`, `per_page`, `sort`, `search`
-- `GET /api/repos/:owner/:repo` - Get single repository
-- `GET /api/repos/:owner/:repo/readme` - Get repository README (with rewritten asset URLs)
-- `GET /api/featured` - Get featured repositories (tagged with "featured" topic)
+- `GET /repos/:owner/:repo` - Get single repository
+- `GET /repos/:owner/:repo/readme` - Get repository README (with rewritten asset URLs)
+- `GET /featured-repos` - Get featured repositories (tagged with "featured" topic)
 
 ## Customization
 
@@ -207,9 +208,3 @@ Edit `frontend/app/globals.css`:
 ### Updating About Page Content
 
 Edit `frontend/app/about/page.tsx` to customize your bio, skills, and technologies.
-
-## Contact
-
-Mitchell Rust - [mitchellrust@gmail.com](mailto:mitchellrust@gmail.com)
-
-GitHub: [@mitchellrust](https://github.com/mitchellrust)

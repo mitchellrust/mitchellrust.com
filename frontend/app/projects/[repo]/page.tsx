@@ -67,7 +67,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {repoData.topics.map((topic) => (
               <span
                 key={topic}
-                className="px-4 py-2 bg-[var(--accent)]/20 text-[var(--accent)] rounded-full text-sm font-medium"
+                className="px-4 py-2 glass bg-[var(--accent)]/20 text-[var(--accent)] rounded-full text-sm font-medium"
               >
                 {topic}
               </span>
@@ -121,7 +121,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 >
                   <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                 </svg>
-                Live Demo
+                See it Live
               </a>
             )}
           </div>

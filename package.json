@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-workspace",
+  "version": "1.0.0",
+  "description": "Mitchell Rust Portfolio - Workspace root",
+  "scripts": {
+    "dev:api": "cd api && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:api": "cd api && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "start:api": "cd api && npm start",
+    "start:frontend": "cd frontend && npm start"
+  },
+  "keywords": [],
+  "author": "Mitchell Rust",
+  "license": "MIT"
+}

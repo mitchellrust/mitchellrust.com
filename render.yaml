@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: portfolio-api
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    rootDir: api
+    envVars:
+      - key: GITHUB_USERNAME
+        value: mitchellrust
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /api/health

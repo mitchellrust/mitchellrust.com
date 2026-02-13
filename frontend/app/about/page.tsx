@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -5,20 +7,33 @@ export default function AboutPage() {
         <h1 className="text-5xl font-bold mb-8">About Me</h1>
 
         <div className="glass rounded-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold mb-4">Who I Am</h2>
-          <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            I'm Mitchell Rust, a passionate software engineer with a desire to always explore a
-            wide variety of technology stacks. With experience in cross-platform and native mobile development,
-            enterprise-level event driven microservice integration, and full stack SaaS application
-            develoment, I've found unique problem spaces through each that I've really enjoyed getting
-            to explore.
-          </p>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            My approach to development centers on writing clean, maintainable code while never 
-            losing sight of the end user's experience. I'm constantly learning and exploring 
-            new technologies so I can leverage the best toolsets for each new project I find
-            myself diving into.
-          </p>
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="flex-shrink-0 mx-auto md:mx-0">
+              <Image 
+                src="/about_pic.jpg" 
+                alt="picture of Mitchell" 
+                width={250} 
+                height={250} 
+                className="rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-3xl font-bold mb-4">Who I Am</h2>
+              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                Hey there! I'm Mitchell, a passionate software engineer with a desire to always explore a
+                wide variety of technology stacks. With experience in cross-platform and native mobile development,
+                enterprise-level event driven microservice integration, and full stack SaaS application
+                development, I've found unique problem spaces through each that I've really enjoyed getting
+                to explore.
+              </p>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                My approach to development centers on writing clean, maintainable code while never 
+                losing sight of the end user's experience. I'm constantly learning and exploring 
+                new technologies so I can leverage the best toolsets for each new project I find
+                myself diving into.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="glass rounded-lg p-8 mb-8">
@@ -39,7 +54,7 @@ export default function AboutPage() {
             <div className="flex items-start">
               <div className="flex-shrink-0 w-2 h-2 mt-2 bg-[var(--accent)] rounded-full mr-4"></div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Enterprise-Grade Event Driven Architcture</h3>
+                <h3 className="text-xl font-semibold mb-2">Enterprise-Grade Event Driven Architecture</h3>
                 <p className="text-gray-400">
                   With a focus on event-driven, asynchronous designs, I've built solutions that provide
                   resiliency when the unexpected occurs. Emphasizing RESTful design in these systems, dealing
@@ -90,8 +105,8 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-4">Technologies I Work With</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Express',
-              'Tailwind CSS', 'Git', 'PostgreSQL', 'MongoDB', 'Docker', 'AWS'
+              'TypeScript', 'React', 'Next.js', 'Node.js', 'Express',
+              'Tailwind CSS', 'C#', '.NET', 'PostgreSQL', 'SQL Server', 'Docker', 'Azure'
             ].map((tech) => (
               <div
                 key={tech}

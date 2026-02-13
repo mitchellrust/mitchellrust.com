@@ -11,14 +11,14 @@ export class GitHubClient {
     this.token = token;
   }
 
-  private getHeaders(): HeadersInit {
-    const headers: HeadersInit = {
+  private getHeaders(): Headers {
+    const headers: Headers = new Headers({
       'Accept': 'application/vnd.github.v3+json',
       'User-Agent': 'Portfolio-API',
-    };
+    });
 
     if (this.token) {
-      headers['Authorization'] = `Bearer ${this.token}`;
+      headers.set('Authorization', `Bearer ${this.token}`);
     }
 
     return headers;
@@ -69,12 +69,12 @@ export class GitHubClient {
         });
 
         if (response.ok) {
-          const data = await response.json();
+          const data = await response.json() as { content?: string };
           
           // GitHub API returns content as base64
           if (data.content) {
             const markdown = Buffer.from(data.content, 'base64').toString('utf-8');
-            return this.rewriteAssetUrls(markdown, this.username, repo, defaultBranch);
+            return this.rewriteAssetUrls(markdown, repo, defaultBranch);
           }
         }
       } catch (error) {

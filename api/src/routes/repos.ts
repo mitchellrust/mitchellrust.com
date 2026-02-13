@@ -37,7 +37,7 @@ router.get('/repos', async (req: Request, res: Response) => {
 // GET /api/repos/:repo - Get a single repository
 router.get('/repos/:repo', async (req: Request, res: Response) => {
   try {
-    const { repo } = req.params;
+    const { repo } = req.params as { repo: string };
     const repoData = await githubClient.getRepo(repo);
     res.json(repoData);
   } catch (error) {
@@ -49,7 +49,7 @@ router.get('/repos/:repo', async (req: Request, res: Response) => {
 // GET /api/repos/:repo/readme - Get repository README
 router.get('/repos/:repo/readme', async (req: Request, res: Response) => {
   try {
-    const { repo } = req.params;
+    const { repo } = req.params as { repo: string };
     
     // First get repo to find default branch
     const repoData = await githubClient.getRepo(repo);

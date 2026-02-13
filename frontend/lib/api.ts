@@ -12,7 +12,7 @@ export async function getRepos(search?: string, page = 1, perPage = 50): Promise
     params.append('search', search);
   }
 
-  const response = await fetch(`${API_BASE}/api/repos?${params.toString()}`, {
+  const response = await fetch(`${API_BASE}/repos?${params.toString()}`, {
     cache: 'no-store',
   });
 
@@ -24,7 +24,7 @@ export async function getRepos(search?: string, page = 1, perPage = 50): Promise
 }
 
 export async function getRepo(repo: string): Promise<GitHubRepo> {
-  const response = await fetch(`${API_BASE}/api/repos/${repo}`, {
+  const response = await fetch(`${API_BASE}/repos/${repo}`, {
     cache: 'no-store',
   });
 
@@ -36,7 +36,7 @@ export async function getRepo(repo: string): Promise<GitHubRepo> {
 }
 
 export async function getReadme(repo: string): Promise<GitHubReadmeResponse> {
-  const response = await fetch(`${API_BASE}/api/repos/${repo}/readme`, {
+  const response = await fetch(`${API_BASE}/repos/${repo}/readme`, {
     cache: 'no-store',
   });
 
@@ -48,7 +48,7 @@ export async function getReadme(repo: string): Promise<GitHubReadmeResponse> {
 }
 
 export async function getFeaturedRepos(): Promise<GitHubRepo[]> {
-  const response = await fetch(`${API_BASE}/api/featured`, {
+  const response = await fetch(`${API_BASE}/featured-repos`, {
     cache: 'no-store',
   });
 

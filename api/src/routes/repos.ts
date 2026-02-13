@@ -8,7 +8,7 @@ const githubClient = new GitHubClient(
   process.env.GITHUB_TOKEN
 );
 
-// GET /api/repos - List all public repositories (excluding forks)
+// GET /repos - List all public repositories (excluding forks)
 router.get('/repos', async (req: Request, res: Response) => {
   try {
     const page = parseInt(req.query.page as string) || 1;
@@ -34,7 +34,7 @@ router.get('/repos', async (req: Request, res: Response) => {
   }
 });
 
-// GET /api/repos/:repo - Get a single repository
+// GET /repos/:repo - Get a single repository
 router.get('/repos/:repo', async (req: Request, res: Response) => {
   try {
     const { repo } = req.params as { repo: string };
@@ -46,7 +46,7 @@ router.get('/repos/:repo', async (req: Request, res: Response) => {
   }
 });
 
-// GET /api/repos/:repo/readme - Get repository README
+// GET /repos/:repo/readme - Get repository README
 router.get('/repos/:repo/readme', async (req: Request, res: Response) => {
   try {
     const { repo } = req.params as { repo: string };
@@ -62,8 +62,8 @@ router.get('/repos/:repo/readme', async (req: Request, res: Response) => {
   }
 });
 
-// GET /api/featured - Get featured repositories (with 'featured' topic)
-router.get('/featured', async (req: Request, res: Response) => {
+// GET /featured-repos - Get featured repositories (with 'featured' topic)
+router.get('/featured-repos', async (req: Request, res: Response) => {
   try {
     const featured = await githubClient.getFeaturedRepos();
     res.json(featured);

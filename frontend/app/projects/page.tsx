@@ -16,7 +16,7 @@ export default function ProjectsPage() {
       try {
         setLoading(true);
         const apiBase = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:4000';
-        const response = await fetch(`${apiBase}/api/repos`);
+        const response = await fetch(`${apiBase}/repos`);
         
         if (!response.ok) {
           throw new Error('Failed to fetch repositories');

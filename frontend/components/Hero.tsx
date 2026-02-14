@@ -46,7 +46,7 @@ export default function Hero() {
         </h1>
         
         <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 animate-fade-in-delay">
-          Software Engineer, Certified "Tinkerer"
+          Software Engineer, Mediocre Volleyball Player
         </p>
 
         <p className="text-lg sm:text-xl text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in-delay-2">
